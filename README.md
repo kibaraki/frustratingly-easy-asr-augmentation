@@ -2,7 +2,7 @@
 Repository for FRUSTRATINGLY EASY DATA AUGMENTATION FOR LOW-RESOURCE ASR
 
 ## TL;DR
-Data augmentation for low-resource languages, using only the training data.
+Data augmentation for ASR in low-resource languages, using only the training data.
 
 ## Data
 - [Vatlongos](https://pangloss.cnrs.fr/corpus/Vatlongos?lang=en) | [(CC BY-NC-ND 3.0)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
