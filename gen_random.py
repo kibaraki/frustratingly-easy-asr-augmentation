@@ -69,12 +69,9 @@ for i in range(num_sentences_to_generate):
         'gloss': new_gloss,
     })
 
-# --- 4. Create the new CSV ---
 new_df = pd.DataFrame(new_sentences)
 new_df.to_csv(f'generated_sentences_nash_random_{num_sentences_to_generate}.csv', index=False)
 
-print("Generated 50 new sentences and saved to 'generated_sentences.csv'")
-#print(vocab)
 print("Sample of generated sentences:")
 print(new_df.head())
 print(len(new_df))
