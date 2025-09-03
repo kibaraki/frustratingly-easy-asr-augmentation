@@ -23,7 +23,6 @@ for _, row in df.iterrows():
             if clean_words[i] not in vocab[gloss_words[i]]:
                 vocab[gloss_words[i]].append(clean_words[i])
 
-# Sentence Generation 
 
 # Create new sentences by taking existing sentences and substituting words
 # with other words from vocabulary that have the same gloss
@@ -86,14 +85,8 @@ for i in range(num_sentences_to_generate):
 
 
 new_df = pd.DataFrame(new_sentences)
-
-
-
 new_df.to_csv(f'generated_sentences_{num_sentences_to_generate}.csv', index=False)
 
-
-
-print("Generated 50 new sentences and saved to 'generated_sentences.csv'")
 print(vocab)
 print("Sample of generated sentences:")
 print(new_df.head())
