@@ -2,7 +2,7 @@
 Repository for FRUSTRATINGLY EASY DATA AUGMENTATION FOR LOW-RESOURCE ASR
 
 ## Paper
-[link to be added later]()
+[arXiv](https://arxiv.org/abs/2509.15373)
 
 ## TL;DR
 Data augmentation for ASR in low-resource languages, using only the training data.
