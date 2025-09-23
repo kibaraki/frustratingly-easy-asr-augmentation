@@ -1,5 +1,4 @@
 # frustratingly-easy-asr-augmentation
-Repository for FRUSTRATINGLY EASY DATA AUGMENTATION FOR LOW-RESOURCE ASR
 
 ## Paper
 This paper introduces three self-contained data augmentation methods for low-resource Automatic Speech Recognition (ASR). Our techniques first generate novel text--using gloss-based replacement, random replacement, or an LLM-based approach--and then apply Text-to-Speech (TTS) to produce synthetic audio. We apply these methods, which leverage only the original annotated data, to four languages with extremely limited resources (Vatlongos, Nashta, Shinekhen Buryat, and Kakabe).
@@ -11,7 +10,7 @@ Data augmentation for ASR in low-resource languages, using only the training dat
 ## Data
 - [Vatlongos](https://pangloss.cnrs.fr/corpus/Vatlongos?lang=en) | [(CC BY-NC-ND 3.0)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
 - [Nashta](https://pangloss.cnrs.fr/corpus/Nashta?lang=en) | [(CC BY-NC 2.5)](https://creativecommons.org/licenses/by-nc/2.5/)
-- [Shinekhen Buryat](https://tufs.repo.nii.ac.jp/search?page=1&size=50&sort=custom_sort&search_type=2&q=1729497608274) | [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.en), [Hugging Face](https://huggingface.co/datasets/kibaraki/Shinekhen-Buryat)
+- [Shinekhen Buryat](https://tufs.repo.nii.ac.jp/search?page=1&size=50&sort=custom_sort&search_type=2&q=1729497608274) | [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.en), dataset and models on [Hugging Face](https://huggingface.co/datasets/kibaraki/Shinekhen-Buryat)
 - [Kakabe](https://pangloss.cnrs.fr/corpus/Kakabe?lang=en) | [(CC BY-NC-ND 3.0)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
 - [LibriSpeech (English)](https://www.openslr.org/12) | [(CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
   
