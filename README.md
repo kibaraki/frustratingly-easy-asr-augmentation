@@ -16,8 +16,20 @@ Data augmentation for ASR in low-resource languages, using only the training dat
 ## Code
 - `finetune_wav2vec2.py`: fine-tuning the models
 - `pipeline.py`: evaluating the models
-- `gen_sentences.py`: generate synthetic sentences from training sentences, by swapping out words with alternatives, based on gloss and POS
-- `gen_random.py`: generate synthetic sentences from training sentences, by swapping out words randomly with words in vocabulary
+- `data_processing/`
+  - `adjust_cols.py`: adjust columns in TTS-generated csv to columns matching training data csv 
+  - `combine_splits.py`: combine different splits into one csv
+  - `create_vocab.py`: given all annotated data (before making splits), generate `vocab.json` of all phonemes/characters
+  - `extract_crop_kakabe.py`: example of `extract_crop.py` to extract transcription from XML file
+  - `sample.py`: sample the TTS-generated data, to maintain 1:1 ratio of synthetic to original data
+  - `train_split.py`: given all annotated data, make train/val/test splits
+- `data_augmentation/`
+  - `gen_sentences.py`: generate synthetic sentences from training sentences, by swapping out words with alternatives, based on gloss and POS
+  - `gen_random.py`: generate synthetic sentences from training sentences, by swapping out words randomly with words in vocabulary
+- `analysis/`
+  - `count_words.py`: count the number of unique words and glosses
+  - `hal_count-new.py`: count the number of shared words (overlapping vocab) for two splits
+
 
 ## `finetune_wav2vec2.py`
 ```
@@ -34,3 +46,7 @@ python3 pipeline.py --model models/fl_e30_b4_lr1e-4_cer_random873+shib --no-shib
   --dataset_1 split/shibur_val15_0_res_clean.csv --dataset_2 split/shibur_test15_0_res_clean.csv \
   --tran_col clean_text
 ```
+## Augmentation Methods
+- Replacing words by words with the same gloss
+- Replacing words with random words
+- Generating new sentences using a LLM (not included in repository)
