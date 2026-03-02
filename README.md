@@ -1,8 +1,8 @@
-# frustratingly-easy-asr-augmentation
+# data-augmentation-for-low-resource-asr
+
 
 ## Paper
-This paper introduces three self-contained data augmentation methods for low-resource Automatic Speech Recognition (ASR). Our techniques first generate novel text--using gloss-based replacement, random replacement, or an LLM-based approach--and then apply Text-to-Speech (TTS) to produce synthetic audio. We apply these methods, which leverage only the original annotated data, to four languages with extremely limited resources (Vatlongos, Nashta, Shinekhen Buryat, and Kakabe).
-[[arXiv]](https://arxiv.org/abs/2509.15373)
+Standard data augmentation methods like SpecAugment have limited benefit in extremely low-resource settings. Furthermore, low-resource languages suffer from a lack of large text corpora or unlabeled/labeled audio to draw from. To address this limitation, we investigate two simple generation-based augmentation methods: Tag-Based and Random Replacement. Tag-Based Replacement uses only annotations commonly produced as part of the language documentation process, whereas Random Replacement does not use any linguistic information at all. Experiments on four extremely low-resource languages reveal a synergistic effect: while individual modification-based augmentations like SpecAugment yield marginal or inconsistent gains, combining them with generation-based augmentation reduces WER by an average of 4.7% absolute (10.0% relative), peaking at 8.0% (13.5% relative) reduction for Nashta. Crucially, maximizing variation proves more effective than preserving syntactic coherence.
 
 ## TL;DR
 Data augmentation for ASR in low-resource languages, using only the training data.
@@ -54,13 +54,5 @@ python3 pipeline.py --model models/fl_e30_b4_lr1e-4_cer_random873+shib --no-shib
 
 ## Citation
 ```
-@misc{ibaraki2025frustratinglyeasy,
-      title={Frustratingly Easy Data Augmentation for Low-Resource ASR}, 
-      author={Katsumi Ibaraki and David Chiang},
-      year={2025},
-      eprint={2509.15373},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2509.15373}, 
-}
+
 ```
